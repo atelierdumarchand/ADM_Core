@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <ADM_Core>
+            <version>0.1.0</version>
+        </ADM_Core>
+    </modules>
+    <global>
+        <helpers>
+            <adm_core>
+                <class>ADM_Core_Helper</class>
+            </adm_core>
+        </helpers>    
+    </global>
+</config>

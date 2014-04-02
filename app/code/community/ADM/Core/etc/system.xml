@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <tabs>
+        <adm translate="label" module="adm_core">
+            <label>ADM</label>
+            <sort_order>500</sort_order>
+        </adm>
+    </tabs>
+</config>
