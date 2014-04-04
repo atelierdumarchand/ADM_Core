@@ -6,6 +6,11 @@
         </ADM_Core>
     </modules>
     <global>
+        <models>
+            <adm_core>
+                <class>ADM_Core_Model</class>
+            </adm_core>
+        </models>
         <helpers>
             <adm_core>
                 <class>ADM_Core_Helper</class>
