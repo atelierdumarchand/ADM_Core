@@ -12,7 +12,7 @@ class ADM_Core_Helper_Data extends Mage_Core_Helper_Abstract
      *
      * @param array $config
      */
-    public function getConfigToArray($path)
+    public function getConfigToArray($path, $key='id')
     {
         if(Mage::getConfig()->getNode($path)) {
             $configNodes = Mage::getConfig()->getNode($path)->children();
@@ -46,7 +46,9 @@ class ADM_Core_Helper_Data extends Mage_Core_Helper_Abstract
                     $configLine['label']= $configLine['code'];
                 }
 
-                $config[$configLine['id']] = new Varien_Object($configLine);
+                $configKey = (!empty($configLine[$key])) ? $configLine[$key] : $configLine['id'];
+
+                $config[$configKey] = new Varien_Object($configLine);
             }
         }
 
