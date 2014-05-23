@@ -1,3 +1,5 @@
 # ADM_Core
 app/etc/modules/ADM_Core.xml	app/etc/modules/ADM_Core.xml
 app/code/community/ADM/Core	app/code/community/ADM/Core
+app/design/frontend/base/default/layout/adm/core.xml          app/design/frontend/base/default/layout/adm/core.xml
+app/design/frontend/base/default/template/adm/core  app/design/frontend/base/default/template/adm/core
