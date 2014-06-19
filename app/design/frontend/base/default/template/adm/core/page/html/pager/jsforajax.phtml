@@ -1,0 +1,36 @@
+<?php
+
+?>
+<script type="text/javascript">
+//<![CDATA[
+
+axjaxRedirection= function(url)
+{
+    var request = new Ajax.Updater('<?php echo $this->getAjaxAnchor() ?>',
+            url,
+            {
+                method: 'get',
+                evalScripts:true,
+            }
+        );
+}
+
+$$('div.pager a').each(function(elem) {
+    Event.observe(elem,'click',function(event) {
+        var element = Event.element(event);
+        axjaxRedirection(element.readAttribute('href'));
+        Event.stop(event);
+     });
+});
+
+$$('div.pager select').each(function(elem) {
+    elem.writeAttribute('onchange', '');
+    Event.observe(elem,'change',function(event) {
+        var element = Event.element(event);
+        axjaxRedirection(element.value);
+        Event.stop(event);
+     });
+});
+
+//]]>
+</script>
