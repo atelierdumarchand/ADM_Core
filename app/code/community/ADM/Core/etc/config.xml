@@ -22,4 +22,13 @@
             </adm_core>
         </helpers>    
     </global>
+    <frontend>
+        <layout>
+            <updates>
+                <adm_core>
+                    <file>adm/core.xml</file>
+                </adm_core>
+            </updates>
+        </layout>
+    </frontend>    
 </config>

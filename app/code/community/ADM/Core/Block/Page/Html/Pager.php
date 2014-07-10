@@ -10,24 +10,6 @@ class  ADM_Core_Block_Page_Html_Pager extends Mage_Page_Block_Html_Pager
         $this->setAjaxAnchor('adm-core-ajax-pager');
     }
 
-
-    /**
-     * Preparing global layout
-     *
-     * You can redefine this method in child classes for changing layout
-     *
-     * @return Mage_Core_Block_Abstract
-     */
-    protected function _prepareLayout()
-    {
-        parent::_prepareLayout();
-        $this->setChild('js.for.ajax',$this->getLayout()->createBlock('core/template')
-                                                        ->setTemplate('adm/core/page/html/pager/jsforajax.phtml')
-                       );
-
-        return $this;
-    }
-
     /**
      *
      * @param string $route
@@ -57,8 +39,9 @@ class  ADM_Core_Block_Page_Html_Pager extends Mage_Page_Block_Html_Pager
      */
     protected function _afterToHtml($html)
     {
-        return $html . $this->getChild('js.for.ajax')
-                             ->setAjaxAnchor($this->getAjaxAnchor())
-                             ->toHtml();
+        return $html . $this->getLayout()->createBlock('core/template')
+                                          ->setTemplate('adm/core/page/html/pager/jsforajax.phtml')
+                                          ->setAjaxAnchor($this->getAjaxAnchor())
+                                          ->toHtml();
     }
 }

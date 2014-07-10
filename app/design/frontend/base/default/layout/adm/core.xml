@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <layout version="0.1.0">
 
+    <customer_account_index translate="label">
+        <reference name="customer_account_dashboard">
+                <block type="core_template" name="info1" template="adm/core/customer/account/dashboard.phtml"/>
+        </reference>
+    </customer_account_index>
+    
 </layout>
