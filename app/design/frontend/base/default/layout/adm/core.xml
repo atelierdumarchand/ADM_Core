@@ -3,7 +3,7 @@
 
     <customer_account_index translate="label">
         <reference name="customer_account_dashboard">
-                <block type="core_template" name="info1" template="adm/core/customer/account/dashboard.phtml"/>
+                <block type="adm_core/customer_account_dashboard" name="info1" template="adm/core/customer/account/dashboard.phtml"/>
         </reference>
     </customer_account_index>
     
