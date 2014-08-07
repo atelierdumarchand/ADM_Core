@@ -106,7 +106,7 @@ class ADM_Core_Block_Adminhtml_Widget_Grid_Column_Renderer_Multi
                 $htmlValues[] = $label;
             }
         }
-        return implode(', ', $htmlValues);
+        return implode('<span class="separator">&nbsp;|&nbsp;</span>', $htmlValues);
     }
 
     /**
