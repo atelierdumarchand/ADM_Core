@@ -1,0 +1,5 @@
+{
+  "name":"adm/core",
+  "type":"magento-module",
+  "description":"Magento extension toolbox for other ADM extensions"
+}
