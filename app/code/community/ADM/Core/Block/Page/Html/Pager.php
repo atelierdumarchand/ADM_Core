@@ -42,6 +42,7 @@ class  ADM_Core_Block_Page_Html_Pager extends Mage_Page_Block_Html_Pager
         return $html . $this->getLayout()->createBlock('core/template')
                                           ->setTemplate('adm/core/page/html/pager/jsforajax.phtml')
                                           ->setAjaxAnchor($this->getAjaxAnchor())
+                                          ->setHtmlJsonKey($this->getHtmlJsonKey())
                                           ->toHtml();
     }
 }

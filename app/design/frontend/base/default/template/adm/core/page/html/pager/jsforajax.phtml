@@ -6,6 +6,28 @@
 
 axjaxRedirection= function(url)
 {
+<?php if ($this->getHtmlJsonKey()): ?>
+
+    var request = new Ajax.Request(url, {
+        method:'get',
+        evalScripts:true,
+        onSuccess: function(transport) {
+            response={};
+            if(transport.responseJSON) {
+                response = transport.responseJSON;
+            } else if (transport.responseText)  {
+                response = {<?php echo $this->getHtmlJsonKey() ?>:transport.responseText}
+            } else {
+                response = {<?php echo $this->getHtmlJsonKey() ?>:'No result'};
+            }
+
+            if(response.<?php echo $this->getHtmlJsonKey() ?>) {
+                $('<?php echo $this->getAjaxAnchor() ?>').update(response.<?php echo $this->getHtmlJsonKey() ?>);
+            }
+        }
+    });
+
+<?php else:?>
     var request = new Ajax.Updater('<?php echo $this->getAjaxAnchor() ?>',
             url,
             {
@@ -13,6 +35,7 @@ axjaxRedirection= function(url)
                 evalScripts:true,
             }
         );
+<?php endif;?>
 }
 
 $$('div.pager a').each(function(elem) {
